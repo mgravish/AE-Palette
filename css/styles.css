@@ -1,0 +1,123 @@
+/*Your styles*/
+
+ body {
+/*    margin: 10px;  */
+}
+
+
+#content {
+    margin-right:auto;
+    margin-left:auto;
+    vertical-align:middle;
+    padding-left:10px;
+    padding-top:10px;
+    width:100%;
+}
+
+/*
+Those classes will be edited at runtime with values specified
+by the settings of the CC application
+*/
+.hostFontColor{}
+.hostFontFamily{}
+.hostFontSize{}
+
+/*font family, color and size*/
+.hostFont{}
+/*background color*/
+.hostBgd{}
+/*lighter background color*/
+.hostBgdLight{}
+/*darker background color*/
+.hostBgdDark{}
+/*background color and font*/
+.hostElt{}
+
+
+.hostButton{
+    border:1px solid;
+    border-radius:2px;
+    height:20px;
+    vertical-align:bottom;
+    font-family:inherit;
+    color:inherit;
+    font-size:inherit;
+}
+
+* { box-sizing: border-box; } 
+
+/* ---- grid ---- */
+
+.grid {
+  /*-- background: #DDD; --*/
+  max-width: 1200px;
+  float:left;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: gray;
+  box-shadow:inset 0px 0px 0px 0px hsla(0, 0%, 0%, 0.35);
+  transition: box-shadow 0.3s;
+  transition-timing-function: cubic-bezier(.47,.01,.41,.99);
+  border-radius: 4px;
+}
+
+.shift-grid-item {
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: gray;
+  box-shadow:inset 0px 0px 0px 0px hsla(0, 0%, 0%, 0.35);
+  transition: box-shadow 0.3s;
+  transition-timing-function: cubic-bezier(.47,.01,.41,.99);
+  border-radius: 4px;
+  opacity:0.5;
+}
+
+#add-button{
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-right:5px;
+  border: 4px dashed #979797;
+  border-radius: 4px;
+  transition: border 0.2s;
+}
+
+#add-button:hover{
+  border: 4px dashed #F5F5F5;
+  transition: border 0.1s;
+  cursor: pointer;
+}
+
+.grid-item:hover {
+  box-shadow:inset 0px 0px 0px 5px hsla(0, 0%, 0%, 0.35);
+  transition: box-shadow 0.3s;
+  transition-timing-function: cubic-bezier(.06,.39,.15,.99);
+  cursor: move;
+}
+
+.grid-item.is-dragging,
+.grid-item.is-positioning-post-drag {
+  background: #C90;
+  z-index: 2;
+}
+
+.packery-drop-placeholder {
+  outline: 3px dashed hsla(0, 0%, 0%, 0.5);
+  outline-offset: -6px;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+}
